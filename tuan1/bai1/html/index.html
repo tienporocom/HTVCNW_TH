@@ -20,10 +20,79 @@
         }
         .container{
             background-color: rgb(238, 224, 189);
+            width: auto;
         }
+        .table_1, td{
+            border: 1px solid black;
+            text-align: center;
+            border-spacing: 8px;
+        }
+        .table_1 td{
+            width: 50px;
+            height: 50px;
+        }
+        .W_CL{
+            background-color: white;
+        }
+        .O_CL{
+            background-color: orange;
+        }
+        .Y_CL{
+            background-color: yellow;
+        }
+        .table_2, .table_2 td{
+            background: yellow;
+            text-align: left;
+            color: brown;
+            text-decoration: underline;
+            border: 0.5px solid rgb(55, 55, 55);
+
+        }
+        .table_3{
+            border: 0.5px solid rgb(55, 55, 55);
+
+        }
+        .table_3 td{
+            padding: 10px;
+            border: 0.5px solid rgb(55, 55, 55);
+        }
+        
+        .table_4{
+            border: 0.5px solid rgb(55, 55, 55);
+
+        }
+        .table_5, .table_5 td,  .table_5 th{
+            background: rgb(255, 221, 249);
+            text-align: center;
+            color: rgb(61, 155, 255);
+            font-style: italic;
+            font-weight: bold;
+            border: 0.5px solid rgb(255, 44, 185);
+        }
+        .table_5 td{
+            font-style: italic;
+            font-weight: bold;
+        }
+        .table_5 th{
+            background-color: rgb(249, 125, 255);
+            text-decoration: underline;
+            font-style: normal;
+            color: black;
+        }
+        .table_5 .num{
+            background-color: aqua;
+            font-style: normal;
+            font-weight: lighter;
+            color: black;
+        }
+        .table_5 caption{
+            color: rgb(255, 44, 185);
+        }
+
     </style>
 </head>
 <body>
+    <span id="top"></span#>
     <div class="container">
         <h1 class="heading">Nguyễn Văn Tiến #1</h1>
         <hr>
@@ -80,8 +149,305 @@
         </ol>
         <li class="LM">Item Five</li>
     </ol>
+    <ol type="I">
+        <li>Oakfield Midle Schoot</li>
+        <ol type="A">
+            <li>Tod Hastings</li>
+            <ol type="1">
+                <li>Math (#3)</li>
+                <li>History (#2)</li>
+                <li>Science (#2)</li>
+            </ol>
+            <li>Bonita Chavez</li>
+            <ol>
+                <li>Math (#1)</li>
+                <li>History (#4)</li>
+                <li>Science (#3)</li>
+            </ol>
+        </ol>
+        <li>Parkview Mid-High</li>
+        <ol type="A">
+            <li>Jacque Russell</li>
+            <ol type="1">
+                <li >Math (#2)</li>
+                <li>History (#5)</li>
+                <li>Seience (#4)</li>
+            </ol>
+            <li>Dwayne Clancy</li>
+            <ol type="1">
+                <li>Math (#4)</li>
+                <li>History (#7)</li>
+                <li>Science (#1)</li>
+            </ol>
+        </ol>
+        <li>Jackson Heights Middle School</li>
+        <ol type="A">
+            <li>JChristine Quon</li>
+            <ol type="1">
+                <li>Math (#7)</li>
+                <li>History (#6)</li>
+                <li>SScience (#5)</li>
+            </ol>
+            <li>Roger Dietz</li>
+            <ol type="1">
+                <li>Math (#5)</li>
+                <li>History (#8)</li>
+                <li>Science (#7)</li>
+            </ol>
+        </ol>
+    </ol>
     
 
+    <h3>Example Cafe Menu</h3>
+    <a href="#Starters">Starters</a> | <a href="#Main_courses">Main Course</a> | <a href="#Desserts">dessert</a>
+    <h3 id="Starters">Starters</h3>
+    <ul type="dot">
+        <li>Chestuut and Mushroom Gouions <a href="">(v)</a></li>
+        <li>Goat Cheese Salad <a href="">(v)</a></li>
+        <li>Honey Soy Chicken Kebabs</li>
+        <li>Seafood Salad</li>
+    </ul>
+    <a href="#top">Back to top</a>
 
+    <h3 id="Main_courses">Main courses</h3>
+    <ul type="dot">
+        <li>Spinach and Ricotta Roulade <a href="">(v)</a></li>
+        <li>Beef Tournados with Mustard and Dill Sauce</li>
+        <li>Roast Chicken Salad</li>
+        <li>Icelandic Cod with Parsley Sauce</li>
+        <li>Mushroom Wellington <a href="">(v)</a></li>
+    </ul>
+    <a href="#top">Back to top</a>
+
+    <h3 id="Desserts">Desserts</h3>
+    <ul type="dot">
+        <li>Lemon Sorbet <a href="">(v)</a></li>
+        <li>Chocolate Mud Pie <a href="">(v)</a></li>
+        <li>Pecan Pie <a href="">(v)</a></li>
+        <li>Selection of Fine Cheeses from Around the World</li>
+    </ul>
+    <a href="#top">Back to top</a>
+    <p>Items marked with a <a href="">(v)</a> are suitable for vegetarians.</p>
+
+
+    <h2>Linking and Navigation</h2>
+    <p>This page covers the following topics:</p>
+    <ul type="dot">
+        <li><a href="#URLs">URLs</a></li>
+        <li><a href="#Source_Anchors">Source Anchors</a></li>
+        <li><a href="#Destination_Anchors">Destination Anchors</a></li>
+        <li><a href="">Examples</a></li>
+    </ul>
+    <h3 id="URLs">URLs</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adapisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Dis aute iure dolor in reprehenderit in voluptate velit
+        esse cillum dolore eu fugiat nulla paratur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <a href="#top">Back to top</a>
+    <h3 id="#Source_Anchors">Source Anchors</h3>
+    <p>Lorem ipsum dolor sit anet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute iure dolor in reprehenderit in voluptate velit
+        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <a href="#top">Back to top</a>
+    
+
+        <table class="table_1">
+            <tr>
+                <td class="W_CL">1</td>
+                <td colspan="3" class="W_CL">2</td>
+            </tr><tr>
+                <td rowspan="3" class="W_CL">3</td>
+                <td class="O_CL">4</td>
+                <td class="O_CL">5</td>
+                <td rowspan="2" class="Y_CL">6</td>
+            </tr><tr>
+                <td class="O_CL">7</td>
+                <td class="O_CL">8</td>
+            </tr><tr>
+                <td colspan="2" class="Y_CL">9</td>
+                <td colspan="2" class="Y_CL">10</td>
+            </tr>
+        </table>
+
+        <br><br>
+
+        <table class="table_2">
+            <tr>
+                <td>(1)</td>
+                <td>(2)</td>
+                <td>(3)</td>
+                <td style="width: 80px;text-align: center;">(4)</td>
+                <td>(5)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="3">Part I</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="2">Chapter 1</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td>Section A</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td>Section B</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="2">Chapter 2</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td>Section A</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td>Section B</td>
+                <td></td>
+            </tr>
+            
+
+            <tr>
+                <td></td>
+                <td colspan="3">Part II</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="2">Chapter 3</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td>Section A</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td>Section B</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="2">Chapter 4</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td>Section A</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td>Section B</td>
+                <td></td>
+            </tr>
+        </table>
+
+        <br>
+
+        <table class="table_3">
+            <tr>
+                <td>6,470</td>
+                <td>6,470</td>
+            </tr>
+            <tr>
+                <td>6,470</td>
+                <td>6,470</td>
+            </tr>
+        </table>
+
+        <br>
+
+        <table class="table_4">
+            <tr>
+                <td>6,470</td>
+                <td>6,470</td>
+            </tr>
+            <tr>
+                <td rowspan="2">6,470</td>
+                <td>6,470</td>
+            </tr>
+            <tr>
+                <td>6,470</td>
+            </tr>
+        </table>
+
+        <br>
+        
+        <table class="table_5">
+            <caption>NUMBERS 1-5 in VARIOUS LANGUAGES</caption>
+            <tr>
+                <td style="width: 15px;"></td>
+                <th>English</td>
+                <th>Espanol</td>
+                <th>Francais</td>
+                <th>Italiano</td>
+                <th>Deutsch</td>
+            </tr>
+            <tr>
+                <td class="num">1</td>
+                <td>one</td>
+                <td>uno</td>
+                <td>un</td>
+                <td>uno</td>
+                <td>eins</td>
+            </tr>
+            <tr>
+                <td class="num">2</td>
+                <td>two</td>
+                <td>dos</td>
+                <td>deux</td>
+                <td>due</td>
+                <td>zwei</td>
+            </tr>
+            <tr>
+                <td class="num">3</td>
+                <td>three</td>
+                <td>tres</td>
+                <td>trois</td>
+                <td>tre</td>
+                <td>drei</td>
+            </tr> <tr>
+                <td class="num">4</td>
+                <td>four</td>
+                <td>cuatro</td>
+                <td>quatre</td>
+                <td>quattro</td>
+                <td>vier</td>
+            </tr>
+            <tr>
+                <td class="num">5</td>
+                <td>five</td>
+                <td>cinco</td>
+                <td>cinq</td>
+                <td>cinque</td>
+                <td>funf</td>
+            </tr>
+        </table>
+        <p><img style="width: 50px; float: left; " src="https://img.freepik.com/premium-vector/smiling-face-with-smiling-eyes-emoticon_1692-47.jpg?w=2000" alt="">A smile is a facial expression formed primarily by 
+            flexing the muscles at the sides of the mouth. It is
+            believed it takes about 80 muscles to smile. Some smiles
+             include a contraction of the muscles at the comer of the 
+             eyes, an action known as a "Duchenne smile". Smiles performed 
+             without the eye contraction may be perceived as insincere.</p>
+             <br>
+        <p><img style="width: 50px; float: right; " src="https://img.freepik.com/premium-vector/smiling-face-with-smiling-eyes-emoticon_1692-47.jpg?w=2000" alt="" >A smile is a facial expression formed primarily by 
+            flexing the muscles at the sides of the mouth. It is
+            believed it takes about 80 muscles to smile. Some smiles
+            include a contraction of the muscles at the comer of the 
+            eyes, an action known as a "Duchenne smile". Smiles performed 
+            without the eye contraction may be perceived as insincere.</p>
+            
     </body>
 </html>
