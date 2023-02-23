@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.table_1, td{
+            border: 1px solid black;
+            text-align: center;
+            border-spacing: 8px;
+        }
+        .table_1 td{
+            width: 50px;
+            height: 50px;
+        }
+        .W_CL{
+            background-color: white;
+        }
+        .O_CL{
+            background-color: orange;
+        }
+        .Y_CL{
+            background-color: yellow;
+        }
+        .table_2, .table_2 td{
+            background: yellow;
+            text-align: left;
+            color: brown;
+            text-decoration: underline;
+            border: 0.5px solid rgb(55, 55, 55);
+
+        }
+        .table_3{
+            border: 0.5px solid rgb(55, 55, 55);
+
+        }
+        .table_3 td{
+            padding: 10px;
+            border: 0.5px solid rgb(55, 55, 55);
+        }
+        
+        .table_4{
+            border: 0.5px solid rgb(55, 55, 55);
+
+        }
+        .table_5, .table_5 td,  .table_5 th{
+            background: rgb(255, 221, 249);
+            text-align: center;
+            color: rgb(61, 155, 255);
+            font-style: italic;
+            font-weight: bold;
+            border: 0.5px solid rgb(255, 44, 185);
+        }
+        .table_5 td{
+            font-style: italic;
+            font-weight: bold;
+        }
+        .table_5 th{
+            background-color: rgb(249, 125, 255);
+            text-decoration: underline;
+            font-style: normal;
+            color: black;
+        }
+        .table_5 .num{
+            background-color: aqua;
+            font-style: normal;
+            font-weight: lighter;
+            color: black;
+        }
+        .table_5 caption{
+            color: rgb(255, 44, 185);
+        }
+
+    </style>
+</head>
+<body>
+        <table class="table_1">
+            <tr>
+                <td class="W_CL">1</td>
+                <td colspan="3" class="W_CL">2</td>
+            </tr><tr>
+                <td rowspan="3" class="W_CL">3</td>
+                <td class="O_CL">4</td>
+                <td class="O_CL">5</td>
+                <td rowspan="2" class="Y_CL">6</td>
+            </tr><tr>
+                <td class="O_CL">7</td>
+                <td class="O_CL">8</td>
+            </tr><tr>
+                <td colspan="2" class="Y_CL">9</td>
+                <td colspan="2" class="Y_CL">10</td>
+            </tr>
+        </table>
+
+        <br><hr><br>
+
+        <table class="table_2">
+            <tr>
+                <td>(1)</td>
+                <td>(2)</td>
+                <td>(3)</td>
+                <td style="width: 80px;text-align: center;">(4)</td>
+                <td>(5)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="3">Part I</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="2">Chapter 1</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td>Section A</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td>Section B</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="2">Chapter 2</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td>Section A</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td>Section B</td>
+                <td></td>
+            </tr>
+            
+
+            <tr>
+                <td></td>
+                <td colspan="3">Part II</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="2">Chapter 3</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td>Section A</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td>Section B</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="2">Chapter 4</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td>Section A</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td>Section B</td>
+                <td></td>
+            </tr>
+        </table>
+
+        <br><hr><br>
+
+        <table class="table_3">
+            <tr>
+                <td>6,470</td>
+                <td>6,470</td>
+            </tr>
+            <tr>
+                <td>6,470</td>
+                <td>6,470</td>
+            </tr>
+        </table>
+
+        <br>
+
+        <table class="table_4">
+            <tr>
+                <td>6,470</td>
+                <td>6,470</td>
+            </tr>
+            <tr>
+                <td rowspan="2">6,470</td>
+                <td>6,470</td>
+            </tr>
+            <tr>
+                <td>6,470</td>
+            </tr>
+        </table>
+
+        <br>
+        
+        <table class="table_5">
+            <caption>NUMBERS 1-5 in VARIOUS LANGUAGES</caption>
+            <tr>
+                <td style="width: 15px;"></td>
+                <th>English</td>
+                <th>Espanol</td>
+                <th>Francais</td>
+                <th>Italiano</td>
+                <th>Deutsch</td>
+            </tr>
+            <tr>
+                <td class="num">1</td>
+                <td>one</td>
+                <td>uno</td>
+                <td>un</td>
+                <td>uno</td>
+                <td>eins</td>
+            </tr>
+            <tr>
+                <td class="num">2</td>
+                <td>two</td>
+                <td>dos</td>
+                <td>deux</td>
+                <td>due</td>
+                <td>zwei</td>
+            </tr>
+            <tr>
+                <td class="num">3</td>
+                <td>three</td>
+                <td>tres</td>
+                <td>trois</td>
+                <td>tre</td>
+                <td>drei</td>
+            </tr> <tr>
+                <td class="num">4</td>
+                <td>four</td>
+                <td>cuatro</td>
+                <td>quatre</td>
+                <td>quattro</td>
+                <td>vier</td>
+            </tr>
+            <tr>
+                <td class="num">5</td>
+                <td>five</td>
+                <td>cinco</td>
+                <td>cinq</td>
+                <td>cinque</td>
+                <td>funf</td>
+            </tr>
+        </table>
+</body>
+</html>
