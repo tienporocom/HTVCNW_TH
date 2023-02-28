@@ -1,88 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Contact Us</h1>
     <fieldset>
-        <legend>Your message:</legend>
-        <table>
-            <tr>
-                <td><label for="To_IP">To</label></td>
-                <td><input type="text" name="To_IP" id="To_IP"></td>
-            </tr>
-            <tr>
-                <td><label for="email">Newsletter</label></td>
-                <td><input type="email" name="email" id="email"></td>
-            </tr>
-            <tr>
-                <td><label for="message">Message</label></td>
-                <td><textarea name="message" id="message" cols="30" rows="10"></textarea></td>
-            </tr> 
-                    </table>
+      <legend>Your message:</legend>
+      <table>
+        <tr>
+          <td><label for="To_IP">To</label></td>
+          <td><input type="text" name="To_IP" id="To_IP" /></td>
+        </tr>
+        <tr>
+          <td><label for="email">Newsletter</label></td>
+          <td><input type="email" name="email" id="email" /></td>
+        </tr>
+        <tr>
+          <td><label for="message">Message</label></td>
+          <td>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </td>
+        </tr>
+      </table>
     </fieldset>
     <fieldset>
-        <legend>How you founf us:</legend>
-        <table>
-            <tr>
-                <td><label for="hear">How did you hear of us</label></td>
-                <td>
-                    <select name="" id="hear">
-                        <option value="1">Google</option>
-                        <option value="2">Facebook</option>
-                        <option value="3">Tiktok</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="NL_CB">Newsletter</label></td>
-                <td><input type="checkbox" name="NL" id="NL_CB"> <label for="NL_CB">Ensure this box if you  would like to receive email update</label></td>
-            </tr>
-        </table>
+      <legend>How you founf us:</legend>
+      <table>
+        <tr>
+          <td><label for="hear">How did you hear of us</label></td>
+          <td>
+            <select name="" id="hear">
+              <option value="1">Google</option>
+              <option value="2">Facebook</option>
+              <option value="3">Tiktok</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="NL_CB">Newsletter</label></td>
+          <td>
+            <input type="checkbox" name="NL" id="NL_CB" />
+            <label for="NL_CB"
+              >Ensure this box if you would like to receive email update</label
+            >
+          </td>
+        </tr>
+      </table>
     </fieldset>
-    <input type="submit" value="Send message">
-    <br><br>
+    <input type="submit" value="Send message" />
+    <br /><br />
     <fieldset>
-        <legend>Contact Information</legend>
-        <table>
-            <tr>
-                <td><label for="F_N">First name:</label></td>
-                <td><input type="text" name="F_N" id="F_N"></td>
-            </tr>
-            <tr>
-                <td><label for="L_N">Last name:</label></td>
-                <td><input type="text" name="L_N" id="L_N"></td>
-            </tr>
-            <tr>
-                <td><label for="email">E-mail:</label></td>
-                <td><input type="email" name="email" id="email"></td>
-            </tr>
-        </table>
-    </fieldset>
-    <fieldset>
-        <legend>Competition Question</legend>
-        <p>How tall is Eiffel Toweer in Paris, France?</p>
-        <input type="radio" name="quiz" id="ans1">
-        <label for="ans1">584 ft</label><br>
-        <input type="radio" name="quiz" id="ans2">
-        <label for="ans2">784 ft</label><br>
-        <input type="radio" name="quiz" id="ans3">
-        <label for="ans3">984 ft</label><br>
-        <input type="radio" name="quiz" id="ans4">
-        <label for="ans4">1184 ft</label>
+      <legend>Contact Information</legend>
+      <table>
+        <tr>
+          <td><label for="F_N">First name:</label></td>
+          <td><input type="text" name="F_N" id="F_N" /></td>
+        </tr>
+        <tr>
+          <td><label for="L_N">Last name:</label></td>
+          <td><input type="text" name="L_N" id="L_N" /></td>
+        </tr>
+        <tr>
+          <td><label for="email">E-mail:</label></td>
+          <td><input type="email" name="email" id="email" /></td>
+        </tr>
+      </table>
     </fieldset>
     <fieldset>
-        <legend>Tiebreaker Question</legend>
-        <p>in 25 words or less, say why would you like to win $10,000:</p>
-        <textarea name="" id="" cols="40" rows="10"></textarea>
+      <legend>Competition Question</legend>
+      <p>How tall is Eiffel Toweer in Paris, France?</p>
+      <input type="radio" name="quiz" id="ans1" />
+      <label for="ans1">584 ft</label><br />
+      <input type="radio" name="quiz" id="ans2" />
+      <label for="ans2">784 ft</label><br />
+      <input type="radio" name="quiz" id="ans3" />
+      <label for="ans3">984 ft</label><br />
+      <input type="radio" name="quiz" id="ans4" />
+      <label for="ans4">1184 ft</label>
     </fieldset>
     <fieldset>
-        <legend>Enter competition</legend>
-        <input type="submit" value="Enter competition">
+      <legend>Tiebreaker Question</legend>
+      <p>in 25 words or less, say why would you like to win $10,000:</p>
+      <textarea name="" id="" cols="40" rows="10"></textarea>
     </fieldset>
-</body>
+    <fieldset>
+      <legend>Enter competition</legend>
+      <input type="submit" value="Enter competition" />
+    </fieldset>
+  </body>
 </html>

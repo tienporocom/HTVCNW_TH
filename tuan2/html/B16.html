@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Travel reservation form</h3>
+    <h4>*denotes mandotory</h4>
+    <form action="">
+        <label for="FName">Full name*:</label><br>
+        <input type="text" name="FName" id="Fname" placeholder="FirstName LastName"><br>
+        <label for="Email">Email address*:</label><br>
+        <input type="email" name="Email" id="Email" placeholder="EMAIL_ADDRESS"><br>
+        <label for="TPackage">Select Tour Package</label><br>
+        <select name="TPackage" id="TPackage">
+            <option value="1">Independent tour</option>
+            <option value="2">Escorted tour</option>
+            <option value="3">Incentive tour</option>
+            <option value="4">Hosted tour and freedom tour</option>
+        </select><br>
+        <label for="ADate">Arrival dates*:</label><br>
+        <input type="date" name="ADate" id="ADate"><br>
+        <label for="NOP">Full name*:</label><br>
+        <input type="number" name="NOP" id="NOP" placeholder="UNKNOWN_TYPE"><br>
+        
+        <label for="Avail">What would you want to avail?*</label><br>
+        <label for="Board">Boarding</label>
+        <input type="checkbox" name="Avail" id="Board"><br>
+        <label for="Food">Fooding</label>
+        <input type="checkbox" name="Avail" id="Food"><br>
+        <label for="SS">Sight seeing</label>
+        <input type="checkbox" name="Avail" id="SS"><br>
+
+        <label for="DCC">Discount coupon code:</label><br>
+        <input type="text" name="DCC" id="DCC" placeholder="UNKNOWN_TYPE"><br>
+
+        <label for="Term">Terms and conditions*</label><br>
+        <input type="radio" name="Term" id="Agree">
+        <label for="Agree">I agree</label>
+        <input type="radio" name="Term" id="DAgree">
+        <label for="DAgree">I disagree</label><br>
+        <button type="submit">Complete reservation</button><br>
+    </form>
+</body>
+</html>
