@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/a8430e8cd0.css" crossorigin="anonymous">
+   <style>
+        *{
+            padding: 0px;
+            margin: 0 auto;
+        }
+        .wrapper{
+            width: 1000px;
+            border: 1px solid black;
+        }
+        .logoName{
+            text-align: center;
+            font-size: 40px;
+            font-family: fantasy;
+        }
+        .logoName>span{
+            color: rgb(121, 184, 0);
+        }
+        .logoDes{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 25px;
+            color: rgb(98, 98, 98);
+        }
+        .menu{
+            display: flex;
+            list-style: none;
+            background-color: rgb(100, 100, 100);
+            height: 50px;
+        }
+        .menuItem{
+            line-height: 50px;
+            color: #fff;
+            font-weight: 500;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 0 20px;
+        }
+        .menu>li:hover{
+            background-color: rgb(140, 193, 12);
+        }
+        .aside1{
+            background-color: rgb(75, 182, 61);
+            width: 25%;
+            height: 500px;
+            float: left;
+        }
+        .aside2{
+            background-color: rgb(87, 219, 202);
+            width: 75%;
+            height: 500px;
+            float: right;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                
+                <p class="logoName">W3schools<span>.com</span></p>
+                <p class="logoDes">the world's larges web developer site</p>
+            </div>
+                <ul class="menu">
+                    <li class="menuItem"><i class="fa-solid fa-house"></i></li>
+                    <li class="menuItem">HTML</li>
+                    <li class="menuItem">CSS</li>
+                    <li class="menuItem">JAVASCRIPT</li>
+                    <li class="menuItem">TUTORIALS <i class="fa-solid fa-caret-down"></i></li>
+                    <li class="menuItem">REFERENCES <i class="fas fa-caret-down"></i></li>
+                    <li class="menuItem">EXAMPLE <i class="fas fa-caret-down"></i></li>
+                    <li class="menuItem"><i class="fa-sharp fas fa-earth-americas"></i></li>
+                    <li class="menuItem"><i class="fa-sharp fas fa-magnifying-glass"></i></li>
+                </ul>
+        </header>
+        <div class="aside1">
+
+        </div>
+
+        <div class="aside2">
+
+        </div>
+    </div>
+</body>
+</html>
