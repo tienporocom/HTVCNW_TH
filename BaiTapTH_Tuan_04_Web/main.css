@@ -79,6 +79,7 @@
 }
 .main-contain_top-header{
     display: flex;
+    padding-bottom: 25px;
     justify-content: space-between;
 }
 .meeting_name-of-cre{

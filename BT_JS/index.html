@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h2, h4{
+            margin: 20px auto;
+           text-align: center;
+        }
+        .inp_line{
+            margin: 10px auto;
+            display: block;
+            width: 700px;
+            /* margin-left: 200px; */
+        }
+        .inp_line input[type=text],
+        .inp_line input[type=password],
+        .inp_line input[type=datetime]{
+            width: 230px;
+        }
+        .radio_lb{
+            width: 30px !important; 
+        }
+        .inp_line label{
+            width: 200px;
+            display: inline-block;
+            text-align: right;
+        }
+        .inp_line span{
+            color: red;
+        }
+        .inp_line_btn{
+            text-align: center;
+
+        }
+        .inp_line_btn input{
+            color: #fff;
+            background-color: black;
+            border-radius: 5px;
+            border: none;
+            padding: 5px;
+        }
+
+    </style>
+  <!DOCTYPE html>
+  <html lang="en">
+  
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+  </head>
+  <style>
+      body {
+          font-family: Arial, Helvetica, sans-serif;
+      }
+  
+      div {
+          border-bottom: 1px solid azure;
+          margin: auto;
+          padding-bottom: 10px;
+          padding-top: 5px;
+          width: 720px;
+      }
+  
+      .title {
+          float: left;
+          width: 200px;
+          text-align: right;
+          padding-right: 10px;
+          color: black;
+          font-size: 18px;
+      }
+  
+      .radio-buttons label {
+          float: none;
+      }
+  
+      .submit {
+          text-align: center;
+      }
+  
+      input[type=submit],
+      input[type=reset] {
+          padding: 0.1e, 0.2em;
+          border: 1px solid black(0, 0%, 0%, 0.3);
+          border-radius: 5px;
+          -webkit-border-radius: 5px;
+          border-radius: 5px;
+          background-color: black;
+          color: #fff;
+          text-shadow: 0 -0.1 0 black;
+          font-size: 18px;
+          cursor: pointer;
+          transition: 0.3s;
+      }
+  
+      input[type=submit]:hover,
+      input[type=reset]:hover {
+          background-color: darkgray;
+          transition: 0.3s;
+      }
+  
+      span {
+          color: red;
+          font-size: 14px;
+      }
+  </style>
+  
+  <script>
+      function KiemtraTenDN() {
+          var re = /^[a-z]\w*/;
+          if (re.test(document.getElementById('txtDN').value.trim()) == false) {
+              tendn.innerText = "*Bắt buộc, bắt đầu bằng ký tự";
+              return false;
+          } else {
+              tendn.innerText = "*";
+              return true;
+          }
+      }
+      function KiemtraPassWord() {
+          var re = /(?=.*\d).{6,}/;
+          if (re.test(document.getElementById('txtMK').value.trim()) == false) {
+              mk.innerText = "*Phải có chữ, số, ít nhất 6 ký tự";
+              return false;
+          } else {
+              mk.innerText = "*";
+              return true;
+          }
+      }
+      function KiemtraXacNhanPassWord() {
+          if (document.getElementById('txtXNMK').value != document.getElementById('txtMK').value) {
+              xnmk.innerText = "*Phải giống ô mật khẩu";
+              return false;
+          } else {
+              xnmk.innerText = "*";
+              return true;
+          }
+      }
+      function KiemTraNgaySinh() {
+          var ns = new Date(document.getElementById('txtDS').value);
+          var today = new Date();
+          if (eval(today.getFullYear() - ns.getFullYear()) <= 10) {
+              ngaysinh.innerText = "Tuổi phải lớn hơn 10";
+              return false;
+          } else {
+              ngaysinh.innerText = "*";
+              return true;
+          }
+      }
+      function SubmitForm() {
+          if (KiemtraTenDN() == false || KiemtraPassWord() == false || KiemtraXacNhanPassWord() == false) {
+           alert('Bạn chưa nhập đầy đủ thông tin!');
+              return false;
+          } 
+              return true;
+      }
+    </script>
+</head>
+<body>
+    <h2>ĐĂNG KÍ TÀI KHOẢN</h2>
+    <div class="inp_line">
+        <label for="txtDN">Tên đăng nhập: </label>
+        <input type="password" name="" id="txtDN" placeholder="txtDN" onblur="return KiemtraTenDN();">
+        <span id="tendn">*</span>
+    </div>
+    <div class="inp_line">
+        <label for="txtMK">Mật khẩu: </label>
+        <input type="password" name="" id="txtMK" placeholder="txtMK" onblur="return KiemtraPassWord()">
+        <span id="mk">*</span>
+    </div>
+    <div class="inp_line">
+        <label for="txtXNMK">Nhập lại mật khẩu: </label>
+        <input type="password" name="" id="txtXNMK" placeholder="txtXNMK" onblur="return KiemtraXacNhanPassWord()">
+        <span id="xnmk">*</span>
+    </div>
+    <h4>THÔNG TIN CÁ NHÂN</h4>
+    <div class="inp_line">
+        <label for="txtName">Họ và tên: </label>
+        <input type="text" name="" id="txtName" placeholder="txtName" >
+        <span id="hoten">* bắt buộc</span>
+    </div>
+    <div class="inp_line">
+        <label for="txtDS">Ngày sinh: </label>
+        <input type="date" name="" id="txtDS" onblur="return KiemTraNgaySinh()">
+        <span id="ngaysinh"></span>
+    </div>
+    <div class="inp_line">
+        <label for="gender">Giới tính: </label>
+        <input type="radio" name="gender" id="gender_male">
+        <label class="radio_lb" for="gender_male">Nam</label>
+        <input type="radio" name="gender" id="gender_female">
+        <label class="radio_lb" for="gender_female">Nữ</label>
+
+        <span></span>
+    </div><div class="inp_line">
+        <label for="txtDC">Địa chỉ: </label>
+        <input type="text" name="" id="txtDC"placeholder="txtDC">
+        <span id="diachi"></span>
+    </div>
+    <div class="inp_line">
+        <label for="txtDN">Điện thoại: </label>
+        <input type="tel" name="" id="txtDN" placeholder="txtDN">
+        <span id="dienthoai">phải là số</span>
+    </div>
+    <div class="inp_line">
+        <label for="txtEmail">Email: </label>
+        <input type="email" name="" id="txtEmail" placeholder="txtEmail" onblur="return ">
+        <span id="email">nhập đúng địa chỉ email</span>
+    </div>
+    <div class="inp_line_btn">
+        <input type="submit" value="Đăng kí" id="submit" onblur="return SubmitForm()">
+        <input type="reset" value="Đăng nhập" id="submit" onblur="return SubmitForm()">
+    </div>
+</body>
+</html>
