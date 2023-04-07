@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .container, .row{
+            width: 100%;
+        }
+        .col{
+            width: 25.333333%;
+            float: left;
+            margin: 1%;
+            padding: 1%;
+        }
+        .row::before, .row::after{
+            display: table;
+            content: "";
+        }
+        .row::after{
+            clear: both;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quidem quis, consequuntur minus excepturi quasi ipsum animi, perspiciatis nisi eaque voluptatem ab libero officia hic.
+          </p>
+        </div>
+        <div class="col">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quidem quis, consequuntur minus excepturi quasi ipsum animi, perspiciatis nisi eaque voluptatem ab libero officia hic.
+          </p>
+        </div>
+        <div class="col">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quidem quis, consequuntur minus excepturi quasi ipsum animi, perspiciatis nisi eaque voluptatem ab libero officia hic.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quidem quis, consequuntur minus excepturi quasi ipsum animi, perspiciatis nisi eaque voluptatem ab libero officia hic.
+          </p>
+        </div>
+        <div class="col">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quidem quis, consequuntur minus excepturi quasi ipsum animi, perspiciatis nisi eaque voluptatem ab libero officia hic.
+          </p>
+        </div>
+        <div class="col">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quidem quis, consequuntur minus excepturi quasi ipsum animi, perspiciatis nisi eaque voluptatem ab libero officia hic.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
