@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+
+    <!-- Google Font DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    
+    
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        :root{
+            --while-color: #FFFFFF;
+            --text-color: #323842;
+            --text-description: #459d7a;
+            --smooth: all .3s ease-in;
+        }
+        *{
+            box-sizing: inherit;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--while-color);
+            box-sizing: border-box;
+        }
+        .grid {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        .grid__row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+        .grid__column-3 {
+            padding: 0 15px;
+            width: 25%;
+        }
+
+        .grid__column-6 {
+            padding: 0 15px;
+            width: 50%;
+        }
+        .grid__column-6-3 {
+            padding: 0 15px;
+            width: 33.33333333333333%;
+        }
+        
+        .wrapper {
+
+        }
+        .navbar-container {
+            height: 64px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar__menu-list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+        }
+        .navbar__menu-item {
+            margin-right: 20px;
+           
+        }
+        
+        .navbar__menu-link {
+            text-decoration: none;
+            color: var(--text-color);
+            transition: var(--smooth);
+        }
+
+        .navbar__menu-link:hover {
+            color: #f8ee27;
+            transition: var(--smooth);
+        }
+
+        .navbar__other {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+                
+        .navbar__other-search {
+            display: flex;
+            align-items: center;
+            width: 200px;
+            height: 35px;
+            border: solid var(--text-description) 1px;
+            border-radius: 5px;
+        }
+        .navbar__other-search-input {
+            outline: none;
+            border: none;
+        }
+        .navbar__other-icon {
+            margin: 0 10px;
+            font-size: 12px;
+            color: var(--text-description);
+        }
+
+        .navbar__other-cart {
+            margin: 0 20px;
+        }
+        .navbar__other-cart:hover {
+            cursor: pointer;
+            color: #f8ee27;
+            transition: var(--smooth);
+        }
+
+        .navbar__other-cart__icon {
+            color: var(--text-color);
+        }
+        
+        .navbar__orther-account {
+            
+        }
+
+        .navbar__orther-acount-icon {
+            cursor: pointer;
+            color: var(--text-color);
+        }
+
+        .navbar__orther-acount-icon:hover {
+            color: #f8ee27;
+            transition: var(--smooth);
+        }
+
+        .banner-img {
+            width: 100%;
+        }
+        .banner {
+            margin-top: 0;
+            position: relative;
+        }
+        .banner-content {
+            display: inline-flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100px;
+            left: 200px
+        }
+        .banner-content__title {
+            display: inline;
+            font-size: 48px;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        .banner-content__description {
+            display: inline;
+            font-size: 20px;
+            font-weight: 400;
+            color: var(--text-description);
+        }
+        .banner-img {
+
+        }
+        .product-search {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 50px 0;
+        }
+        .product-search-other {
+            display: flex;
+            align-items: center;
+        }
+        .product-search-list {
+            display: flex;
+            list-style: none;
+        }
+        .product-search-item  {
+            display: inline-flex;
+            align-items: center;
+            width: 190px;
+            height: 50px;
+            background-color: var(--while-color);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--smooth);
+        }
+
+        .product-search-item:hover {
+            opacity: 0.8;
+            transition: var(--smooth);
+        }
+
+        .product-search-item-active {
+            background-color: var(--text-description);
+        }
+
+        .product-search-item-active .product-search-item-link {
+            color: var(--while-color);
+        }
+
+        .product-search-item-link {
+            margin: 0 auto;
+            font-weight: 50px;
+            text-decoration: none;
+            color: var(--text-description);
+        }
+        .product-search-other-search {
+            width: 240px;
+            margin: 0 20px;
+            border-bottom: 1px solid var(--text-description);
+
+        }
+        .product-search-other-search-icon {
+            color: var(--text-description);
+        }
+        .product-search-other-search-input {
+            height: 50px;
+            outline: none;
+            border: none;
+            color: var(--text-description);
+        }
+
+        .product-search-other-sort {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 130px;
+            height: 50px;
+            border-radius: 5px;
+            background-color: #f3f4f6;
+            color: var(--text-description);
+            cursor: pointer;
+        }
+
+        .product-search-other-sort-icon {
+            margin-left: 10px;
+        }
+
+        .product-list {
+
+        }
+        .product-item {
+            display: flex;
+            flex-direction: column;
+            height: 480px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .product-item__img {
+            height: 330px;
+            
+        }
+        .product-item__title {
+            font-size: 20px;
+            margin-top: 20px;
+            color: var(--text-color)
+        }
+        .product-item__description {
+            font-size: 16px;
+            margin-top: 10px;
+            color: var(--text-color);
+        }
+        .product-item__cart {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .product-item__cart-price {
+            position: relative;
+        }
+        .product-item__cart-price span{
+            margin-left: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-description);
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+        }
+        .product-item__cart-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 1px solid var(--text-description);
+            text-align: center;
+            line-height: 45px;
+            color: var(--text-description);
+            transition: var(--smooth);
+            cursor: pointer;
+        }
+
+        .product-item__cart-icon:hover {
+            color:#f8ee27;
+            transition: var(--smooth);
+            border-color: #f8ee27;
+        }
+
+
+        .pagination {
+            margin: 100px 0;
+        }
+        .pagination-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }
+        .pagination-item {
+            display: inline-block;
+            padding: 12px 15px;
+            cursor: pointer;
+        }
+
+        .pagination-item:hover {
+            background-color: #f4faf8;
+            border-radius: 40%;
+        }
+        .pagination-item-link, .pagination-item-icon {
+            text-decoration: none;
+            color: var(--text-description);
+        }
+        .pagination-item--active {
+            background-color: #f4faf8;
+            border-radius: 40%;
+        }
+        .footer {
+            width: 100%;
+            height: 450px;
+            background-color: var(--text-color);
+        }
+
+        .footer__content {
+            height: 450px;
+        }
+
+        .footer__item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .footer__subcribe {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        .subcribe__title {
+            color: var(--while-color);
+            font-size: 28px;
+            
+        }
+
+        .subcribe__description {
+            color: var(--while-color);
+            margin-top: 25px;
+
+        }
+        .subcribe__des {
+            color: var(--while-color);
+        }
+
+        .subcribe__send {
+            display: flex;
+            justify-content: center;
+            width: 430px;
+            background-color: transparent;
+            border: 1px solid var(--while-color);
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .subcribe__send-input {
+            width: 100%;
+        }
+
+        .subcribe__send-input__icon {
+            padding: 0 20px;
+            font-size: 20px;
+            line-height: 50px;
+            color: var(--while-color);
+        }
+
+        .subcribe__send-input__email {
+            
+            height: 50px;
+            width: 250px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: var(--while-color);
+        }
+
+        .subcribe__send-button {
+            width: 130px;
+            height: 52px;
+            color: var(--while-color);
+            background-color: var(--text-description);
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        .subcribe__link {
+
+        }
+
+        .subcribe__link-icon {
+            margin: 30px 0;
+        }
+
+        .footer__about-content, .footer__about {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .footer__about-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            margin: auto 0;
+        }
+        .footer__about-item {
+            margin: auto 0;
+            margin: 10px 0;
+        }
+        .footer__about-item h1 {
+            color: var(--while-color);
+        }
+        .footer__about-item-link {
+            text-decoration: none;
+            color: var(--while-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="navbar">
+            <div class="grid">
+                <div class="navbar-container">
+                    <ul class="navbar__menu-list">
+                        <li class="navbar__menu-item">
+                            <a href="#" class="navbar__menu-link">
+                                Shop
+                            </a>
+                        </li>
+                        <li class="navbar__menu-item">
+                            <a href="#" class="navbar__menu-link">
+                                Offers
+                            </a>
+                        </li>
+                        <li class="navbar__menu-item">
+                            <a href="#" class="navbar__menu-link">
+                                Our story
+                            </a>
+                        </li>
+                        <li class="navbar__menu-item">
+                            <a href="#" class="navbar__menu-link">
+                                Blog
+                            </a>
+                        </li>
+                    </ul>
+                    <img src="./assets/img/logo.png" alt="" class="navbar__logo">
+                    <div class="navbar__other">
+                        <div class="navbar__other-search">
+                            <i class="fa-solid fa-magnifying-glass navbar__other-icon" ></i>
+                            <input type="text" placeholder="Search product..." class="navbar__other-search-input">
+                        </div>
+                        <div class="navbar__other-cart">
+                            <i class="fa-solid fa-cart-shopping navbar__other-cart__icon"></i>
+                            <span>Cart (0)</span>
+                        </div>
+                        <div class="navbar__orther-account">
+                            <i class="fa-solid fa-user navbar__orther-acount-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="banner-content">
+                <h1 class="banner-content__title">Gift for your skin</h1>
+                <p class="banner-content__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor unde vel </p>
+            </div>
+            <img class="banner-img" src="./assets/img/banner.png" alt="">
+        </div>
+        <div class="product">
+            <div class="grid">
+                <div class="product-search">
+                    <ul class="product-search-list">
+                        <li class="product-search-item product-search-item-active">
+                            <a href="#" class="product-search-item-link">
+                                All Products
+                            </a>
+                        </li>
+                        <li class="product-search-item">
+                            <a href="#" class="product-search-item-link">
+                                Face
+                            </a>
+                        </li>
+                        <li class="product-search-item">
+                            <a href="#" class="product-search-item-link">
+                                Body
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="product-search-other">
+                        <div class="product-search-other-search">
+                            <i class="fa-solid fa-magnifying-glass product-search-other-search-icon" ></i>
+                            <input type="text" placeholder="Search product..." class="product-search-other-search-input">
+                        </div>
+                        <div class="product-search-other-sort">
+                            Sort By
+                            <i class="fa-solid fa-arrow-down-short-wide product-search-other-sort-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-list">
+                    <div class="grid__row">
+                        <div class="grid__column-3">
+                            <div class="product-item">
+                                <img src="./assets/img/Image 1 (1).png" alt="" class="product-item__img">
+                                <h1 class="product-item__title">Product title</h1>
+                                <p class="product-item__description">Lorem ipsum dolor sit amet.</p>
+                                <div class="product-item__cart">
+                                    <h1 class="product-item__cart-price">$31 <span>$42</span></h1>
+                                    <i class="fa-solid fa-cart-shopping product-item__cart-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-3">
+                            <div class="product-item">
+                                <img src="./assets/img/Image 1 (1).png" alt="" class="product-item__img">
+                                <h1 class="product-item__title">Product title</h1>
+                                <p class="product-item__description">Lorem ipsum dolor sit amet.</p>
+                                <div class="product-item__cart">
+                                    <h1 class="product-item__cart-price">$31 <span>$42</span></h1>
+                                    <i class="fa-solid fa-cart-shopping product-item__cart-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-3">
+                            <div class="product-item">
+                                <img src="./assets/img/Image 1 (1).png" alt="" class="product-item__img">
+                                <h1 class="product-item__title">Product title</h1>
+                                <p class="product-item__description">Lorem ipsum dolor sit amet.</p>
+                                <div class="product-item__cart">
+                                    <h1 class="product-item__cart-price">$31 <span>$42</span></h1>
+                                    <i class="fa-solid fa-cart-shopping product-item__cart-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-3">
+                            <div class="product-item">
+                                <img src="./assets/img/Image 1 (1).png" alt="" class="product-item__img">
+                                <h1 class="product-item__title">Product title</h1>
+                                <p class="product-item__description">Lorem ipsum dolor sit amet.</p>
+                                <div class="product-item__cart">
+                                    <h1 class="product-item__cart-price">$31 <span>$42</span></h1>
+                                    <i class="fa-solid fa-cart-shopping product-item__cart-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-3">
+                            <div class="product-item">
+                                <img src="./assets/img/Image 1 (1).png" alt="" class="product-item__img">
+                                <h1 class="product-item__title">Product title</h1>
+                                <p class="product-item__description">Lorem ipsum dolor sit amet.</p>
+                                <div class="product-item__cart">
+                                    <h1 class="product-item__cart-price">$31 <span>$42</span></h1>
+                                    <i class="fa-solid fa-cart-shopping product-item__cart-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-3">
+                            <div class="product-item">
+                                <img src="./assets/img/Image 1 (1).png" alt="" class="product-item__img">
+                                <h1 class="product-item__title">Product title</h1>
+                                <p class="product-item__description">Lorem ipsum dolor sit amet.</p>
+                                <div class="product-item__cart">
+                                    <h1 class="product-item__cart-price">$31 <span>$42</span></h1>
+                                    <i class="fa-solid fa-cart-shopping product-item__cart-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-3">
+                            <div class="product-item">
+                                <img src="./assets/img/Image 1 (1).png" alt="" class="product-item__img">
+                                <h1 class="product-item__title">Product title</h1>
+                                <p class="product-item__description">Lorem ipsum dolor sit amet.</p>
+                                <div class="product-item__cart">
+                                    <h1 class="product-item__cart-price">$31 <span>$42</span></h1>
+                                    <i class="fa-solid fa-cart-shopping product-item__cart-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-3">
+                            <div class="product-item">
+                                <img src="./assets/img/Image 1 (1).png" alt="" class="product-item__img">
+                                <h1 class="product-item__title">Product title</h1>
+                                <p class="product-item__description">Lorem ipsum dolor sit amet.</p>
+                                <div class="product-item__cart">
+                                    <h1 class="product-item__cart-price">$31 <span>$42</span></h1>
+                                    <i class="fa-solid fa-cart-shopping product-item__cart-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        <div class="pagination">
+            <div class="grid">
+                <ul class="pagination-list">
+                    <li class="pagination-item">
+                        <a href="#" class="pagination-item-link">
+                            <i class="fa-solid fa-angle-left pagination-item-icon"></i>
+                        </a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href="#" class="pagination-item-link">
+                            1
+                        </a>
+                    </li>
+                    <li class="pagination-item pagination-item--active">
+                        <a href="#" class="pagination-item-link">
+                            2
+                        </a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href="#" class="pagination-item-link">
+                            3
+                        </a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href="#" class="pagination-item-link">
+                            4
+                        </a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href="#" class="pagination-item-link">
+                            <i class="fa-solid fa-angle-right pagination-item-icon"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="grid">
+                <div class="grid__row footer__content">
+                    <div class="grid__column-6">
+                        <div class="footer__about">
+                            <div class="grid__row footer__about-content">
+                                <div class="grid__column-3">
+                                    <ul class="footer__about-list">
+                                        <li class="footer__about-item">
+                                            <h1>About</h1>
+                                        </li>
+                                        <li class="footer__about-item">
+                                            <a href="#" class="footer__about-item-link">Home</a>
+                                        </li>
+                                        <li class="footer__about-item">
+                                            <a href="#" class="footer__about-item-link">Shop</a>
+                                        </li>
+                                        <li class="footer__about-item">
+                                            <a href="#" class="footer__about-item-link">Our story</a>
+                                        </li>
+                                        <li class="footer__about-item">
+                                            <a href="#" class="footer__about-item-link">Blogs</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="grid__column-3">
+                                    <ul class="footer__about-list">
+                                        <li class="footer__about-item">
+                                            <h1>Help</h1>
+                                        </li>
+                                        <li class="footer__about-item">
+                                            <a href="#" class="footer__about-item-link">Shipping $ Returns</a>
+                                        </li>
+                                        <li class="footer__about-item">
+                                            <a href="#" class="footer__about-item-link">Track Order</a>
+                                        </li>
+                                        <li class="footer__about-item">
+                                            <a href="#" class="footer__about-item-link">FAQs</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="grid__column-3">
+                                    <ul class="footer__about-list">
+                                        <li class="footer__about-item">
+                                            <h1>Contact</h1>
+                                        </li>
+                                        <li class="footer__about-item">
+                                            <a href="#" class="footer__about-item-link">Phone</a>
+                                        </li>
+                                        <li class="footer__about-item">
+                                            <a href="#" class="footer__about-item-link">0867713557</a>
+                                        </li>
+                                        <li class="footer__about-item">
+                                            <a href="#" class="footer__about-item-link">Email</a>
+                                        </li>
+                                        <li class="footer__about-item">
+                                            <a href="#" class="footer__about-item-link">ledonchung12a2@gmail.com</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="grid__column-6 footer__item">
+                        <div class="footer__subcribe">
+                            <h1 class="subcribe__title">Receive new promotions</h1>
+                            <p class="subcribe__description">Lorem ipsum dolor sit amet consectetur.</p>
+                            <div class="subcribe__send">
+                                <div class="subcribe__send-input">
+                                    <i class="fa-regular fa-envelope subcribe__send-input__icon"></i>
+                                    <input placeholder="Input your email" type="email" class="subcribe__send-input__email">
+                                </div>
+                                <button class="subcribe__send-button">
+                                    Subcribe
+                                </button>
+                            </div>
+                            <div class="subcribe__link">
+                                <img src="./assets/img/Twitter 1.png" alt="" class="subcribe__link-icon">
+                                <img src="./assets/img/Facebook 1.png" alt="" class="subcribe__link-icon">
+                                <img src="./assets/img/LinkedIn 1.png" alt="" class="subcribe__link-icon">
+                                <img src="./assets/img/YouTube 1.png" alt="" class="subcribe__link-icon">
+                            </div>
+                            <p class="subcribe__des">@2022 Brand, Inc, Privacy Terms Sitemap</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
