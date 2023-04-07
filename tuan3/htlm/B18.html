@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style: none;
+        display: inline-block;
+        background-color: #008000;
+      }
+      li {
+        display: inline-block;
+        padding: 10px 15px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 20px;
+        position: relative;
+      }
+      li ul{
+        display: none;
+        position: absolute;
+        top: 40px;
+        left: 0px;
+        padding: 0;
+      }
+      li:hover{
+        color: #d79b00;
+      }
+      li:hover ul{
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>
+        Product
+        <ul>
+          <li>Engineering</li>
+          <li>Telecom</li>
+          <li>Energy</li>
+          <li>Finance</li>
+          <li>Consultancy</li>
+        </ul>
+      </li>
+      <li>Services</li>
+      <li>Contact</li>
+    </ul>
+  </body>
+</html>
