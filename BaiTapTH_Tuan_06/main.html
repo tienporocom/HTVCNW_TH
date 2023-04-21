@@ -12,9 +12,9 @@
       $(document).ready(function () {
         // alert('ok')
 
-        $("#btnSV").click(function (){
-            $("#myModal").modal();
-        })
+        $("#btnSV").click (function () {
+          $("#myModal").modal();
+        });
       });
     </script>
     <style>
@@ -28,11 +28,11 @@
       .nav-item:hover {
         background: #e7e7e7;
       }
-      label{
+      label {
         margin-right: 20px;
         font-weight: bold;
       }
-      span{
+      span {
         text-align: left;
         margin-left: 150px;
       }
@@ -48,7 +48,9 @@
       <div class="row">
         <ul class="navbar navbar-nav navbar-expand">
           <li class="nav-item"><a href="#" class="nav-link">Đăng nhập</a></li>
-          <li class="nav-item" id="btnSV" ><a href="#" class="nav-link" >Mở tour mới</a></li>
+          <li class="nav-item" id="btnSV">
+            <a href="#" class="nav-link">Mở tour mới</a>
+          </li>
         </ul>
       </div>
       <div class="row">
@@ -81,82 +83,103 @@
       </div>
       <!-- modal -->
       <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title ">THÔNG TIN TOUR</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body" >
-            <form action="" class="text-center">
-              <div class="form-group row">
-                <label class="col-4 col-form-label text-right " for="tourCode"
-                  >Mã tour</label
-                >
-                <input class="col-7" type="text" name="" id="tourCode" value="HUI-HCM-12-2018"/>
-                <span class="col-12">*</span>
-              </div>
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">THÔNG TIN TOUR</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="" class="text-center">
+                <div class="form-group row">
+                  <label class="col-4 col-form-label text-right" for="tourCode"
+                    >Mã tour</label
+                  >
+                  <input
+                    class="col-7"
+                    type="text"
+                    name=""
+                    id="tourCode"
+                    value="HUI-HCM-12-2018"
+                  />
+                  <span class="col-12">*</span>
+                </div>
 
+                <div class="form-group row">
+                  <label
+                    class="col-4 col-form-label text-right"
+                    for="hanhTrinh"
+                  >
+                    Hành trình</label
+                  >
+                  <input
+                    class="col-7"
+                    type="text"
+                    name=""
+                    id="hanhTrinh"
+                    placeholder="Nhập hành trình"
+                  />
+                  <span class="col-12">*</span>
+                </div>
 
-              <div class="form-group row">
-                <label class="col-4 col-form-label text-right " for="hanhTrinh">
-                  Hành trình</label
-                >
-                <input class="col-7" type="text" name="" id="hanhTrinh"  placeholder="Nhập hành trình"/>
-                <span class="col-12">*</span>
-              </div>
+                <div class="form-group row">
+                  <label class="col-4 col-form-label text-right" for="ngayKH"
+                    >Ngày khởi hành</label
+                  >
+                  <input class="col-7" type="date" name="" id="ngayKH" />
+                  <span class="col-12">*</span>
+                </div>
 
+                <div class="form-group row">
+                  <label class="col-4 col-form-label text-right" for="thoiGian"
+                    >Thời gian</label
+                  >
+                  <input
+                    class="col-7"
+                    type="text"
+                    name=""
+                    id="thoiGian"
+                    placeholder="Nhập thời gian đi (4 ngày 3 đêm)"
+                  />
+                  <span class="col-12">*</span>
+                </div>
 
-              <div class="form-group row">
-                <label class="col-4 col-form-label text-right " for="ngayKH"
-                  >Ngày khởi hành</label
-                >
-                <input class="col-7" type="date" name="" id="ngayKH" />
-                <span class="col-12">*</span>
-              </div>
+                <div class="form-group row">
+                  <label class="col-4 col-form-label text-right" for="giaTour"
+                    >Giá tour</label
+                  >
+                  <input
+                    class="col-7"
+                    type="number"
+                    name=""
+                    id="giaTour"
+                    placeholder="Số >0"
+                  />
+                  <span class="col-12">*</span>
+                </div>
 
+                <div class="form-group row">
+                  <label class="col-4 col-form-label text-right" for="giaTour"
+                    >Ảnh đại diện</label
+                  >
+                  <input class="col-7" type="file" name="" id="giaTour" />
+                  <span class="col-12">*</span>
+                </div>
 
-              <div class="form-group row">
-                <label class="col-4 col-form-label text-right " for="thoiGian"
-                  >Thời gian</label
-                >
-                <input class="col-7" type="text" name="" id="thoiGian" placeholder="Nhập thời gian đi (4 ngày 3 đêm)"/>
-                <span class="col-12">*</span>
-              </div>
-
-
-              <div class="form-group row">
-                <label class="col-4 col-form-label text-right " for="giaTour"
-                  >Giá tour</label
-                >
-                <input class="col-7" type="number" name="" id="giaTour" placeholder="Số >0"/>
-                <span class="col-12">*</span>
-              </div>
-
-
-              <div class="form-group row">
-                <label class="col-4 col-form-label text-right " for="giaTour"
-                  >Ảnh đại diện</label
-                >
-                <input class="col-7" type="file" name="" id="giaTour" />
-                <span class="col-12">*</span>
-              </div>
-
-
-              <div class="modal-footer">
-                <button class="btn btn-success col-12" >Lưu</button>
-              </div>
-            </form>
+                <div class="modal-footer">
+                  <button class="btn btn-success col-12">Lưu</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </div>
   </body>
