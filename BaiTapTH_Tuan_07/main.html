@@ -80,13 +80,14 @@
                         tong += parseFloat($(this).val())
                         $('#inpTTT').val(tong);
                     })
-                }
+                }else 
+                    $('#inpTTT').val(0);
+                
             })
 
             $('input[name="inpGT"]').change(function(){
                 var tong = parseFloat($('#inpG').val())+parseFloat($('#inpTTT').val())-parseFloat($(this).val()) 
                 $('#inpTT').val(tong);
-                alert('done')
               })
             $('#btnSave').click(function(){
                 var ma = $('#inpMKH').val();
@@ -200,7 +201,7 @@
                             <label for="inpG" class="col-4" id="">Giá: 
                             </label>
                             <input type="number" name="" id="inpG" class="
-                                col-8" disabled>
+                                col-8" disabled value="2000">
                         </div>
                         <div class="row">
                             <label for="" class="col-4" id="">Đồ dùng</label>
@@ -224,7 +225,7 @@
                             <label for="" class="col-4" id="">Giảm trừ:
                             </label>
                             <div class="col-8">
-                                <input type="radio" name="inpGT" id="inpGT" value="7000" > Ngày thường
+                                <input type="radio" name="inpGT" id="inpGT" value="7000"  checked> Ngày thường
                                 <input type="radio" name="inpGT" id="inpGT"  value="1000"> Cuối tuần
                             </div>
                         </div>
